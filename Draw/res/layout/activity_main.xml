@@ -1,0 +1,213 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.draw.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:clickable="false"
+        android:gravity="center_horizontal"
+        android:longClickable="false"
+        android:orientation="vertical" >
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="75sp"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:gravity="center"
+            android:longClickable="false"
+            android:orientation="horizontal"
+            android:paddingBottom="5sp"
+            android:paddingTop="20sp" >
+            
+            <ImageView
+		       android:id="@+id/tipsy_title"
+		       android:layout_width="fill_parent"
+		       android:layout_height="wrap_content"
+		       android:background="@null"
+		       android:contentDescription="@string/choose_green"
+		       android:src="@drawable/tipsy_logo"
+                />
+
+        </LinearLayout>
+        
+		<LinearLayout
+		    style="?android:attr/buttonBarButtonStyle"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:clickable="false"
+		    android:gravity="center_horizontal"
+		    android:longClickable="false"
+		    android:orientation="horizontal"
+		    android:paddingBottom="30sp"
+		    android:paddingTop="30sp" >
+            
+		    <ImageButton
+		        style="?android:attr/buttonBarButtonStyle"
+				android:layout_weight="1"
+		        android:id="@+id/black"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:background="@null"
+		        android:contentDescription="@string/choose_black"
+		        android:onClick="chooseBlack"
+		        android:src="@drawable/button0" />
+		    
+		   <ImageButton
+		       style="?android:attr/buttonBarButtonStyle"
+		       android:id="@+id/green"
+		       android:layout_weight="1"
+		       android:layout_width="fill_parent"
+		       android:layout_height="fill_parent"
+		       android:background="@null"
+		       android:contentDescription="@string/choose_green"
+		       android:onClick="chooseGreen"
+		       android:src="@drawable/button1" />
+            
+	       <ImageButton
+	           style="?android:attr/buttonBarButtonStyle"
+	           android:id="@+id/purple"
+	           android:layout_weight="1"
+	           android:layout_width="fill_parent"
+	           android:layout_height="fill_parent"
+	           android:background="@null"
+	           android:contentDescription="@string/choose_purple"
+	           android:onClick="choosePurple"
+	           android:src="@drawable/button2" />
+	       
+	        <ImageButton
+	            style="?android:attr/buttonBarButtonStyle"
+	            android:id="@+id/orange"
+	            android:layout_weight="1"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:background="@null"
+	            android:contentDescription="@string/choose_orange"
+	            android:onClick="chooseOrange"
+	            android:src="@drawable/button3" />
+	       
+	    </LinearLayout>
+	    
+		<LinearLayout
+		    android:id="@+id/nibsizes"
+		    style="?android:attr/buttonBarButtonStyle"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:clickable="false"
+		    android:gravity="center"
+		    android:longClickable="false"
+		    android:orientation="horizontal"
+		    android:paddingBottom="30sp"
+		    android:paddingTop="30sp" >
+
+	        <ImageButton
+	            style="?android:attr/buttonBarButtonStyle"
+				android:layout_weight="1"
+	            android:id="@+id/XL"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@null"
+	            android:onClick="chooseXL"
+	            android:src="@drawable/nibxl" />
+	
+	        <ImageButton
+	            style="?android:attr/buttonBarButtonStyle"
+				android:layout_weight="1"
+	            android:id="@+id/large"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@null"
+	            android:onClick="chooseLarge"
+	            android:src="@drawable/nibl" />
+	
+	        <ImageButton
+	            style="?android:attr/buttonBarButtonStyle"
+				android:layout_weight="1"
+	            android:id="@+id/medium"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@null"
+	            android:onClick="chooseMedium"
+	            android:src="@drawable/nibm" />
+	
+	        <ImageButton
+	            style="?android:attr/buttonBarButtonStyle"
+				android:layout_weight="1"
+	            android:id="@+id/small"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@null"
+	            android:onClick="chooseSmall"
+	            android:src="@drawable/nibs" />
+        
+        </LinearLayout>
+
+        <LinearLayout
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:gravity="bottom"
+            android:longClickable="false"
+            android:orientation="horizontal" >
+            
+		      <Button
+		          style="?android:attr/buttonBarButtonStyle"
+		          android:id="@+id/button3"
+		          android:layout_width="fill_parent"
+		          android:layout_height="wrap_content"
+		          android:layout_marginRight="-5sp"
+		          android:background="@drawable/button5"
+		          android:layout_weight="1.6"
+		          android:onClick="goDrawPic"
+		          android:text="@string/pic"
+		          android:textSize="30sp" />
+		
+		      <Button
+		          style="?android:attr/buttonBarButtonStyle"
+		          android:id="@+id/button4"
+		          android:layout_width="fill_parent"
+		          android:layout_height="wrap_content"
+		          android:background="@drawable/button4"
+		          android:layout_weight="1"
+		          android:gravity="center"
+		          android:onClick="goDraw"
+		          android:text="@string/godraw"
+		          android:textSize="30sp" />
+
+
+            
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:gravity="bottom" >
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>
+
